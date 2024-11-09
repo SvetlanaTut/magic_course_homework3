@@ -12,25 +12,15 @@
 # print(count_frequencies(lst2))
 # {'a': 3, 'b': 3, 'c': 1}
 
+def counting_function(elements):
+    repetition_rate = {}
 
-def count_frequencies(lst):
-    pass  # вместо pass - напишите свое решение
+    for element in elements:
+        if element in repetition_rate:
+            repetition_rate[element] += 1
+        else:
+            repetition_rate[element] = 1
 
+    return repetition_rate   
 
-if __name__ == "__main__":
-    lst1 = [1, 2, 2, 3, 3, 3, 4]
-    lst2 = ['a', 'b', 'a', 'c', 'b', 'b', 'a']
-
-    print(
-        "Твой ответ",
-        count_frequencies(lst1),
-        "Верный ответ - {1: 1, 2: 2, 3: 3, 4: 1}"
-    )
-
-    print()
-
-    print(
-        "Твой ответ",
-        count_frequencies(lst2),
-        "Верный ответ - {'a': 3, 'b': 3, 'c': 1}"
-    )
+print(counting_function(["apple", "apple", "banana", "apple", "orange", "banana"]))

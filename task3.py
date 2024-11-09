@@ -9,24 +9,15 @@
 # print(longest_word(sentence2))  # "programming"
 
 
-def longest_word(sentence):
-    pass  # вместо pass - напишите свое решение
+sentence = "Какой чудесный день, какой чудесный пень!"
 
+def long_word(sentence):
+    words = sentence.split()
+    longest_word = ""
 
-if __name__ == "__main__":
-    sentence1 = "The quick brown fox jumped over the lazy dog"
-    sentence2 = "Python programming is fun"
+    for word in words:
+        if len(word) > len(longest_word):
+            longest_word = word
+    return longest_word
 
-    print(
-        "Твой ответ",
-        longest_word(sentence1),
-        "Верный ответ - jumped"
-    )
-
-    print()
-
-    print(
-        "Твой ответ",
-        longest_word(sentence2),
-        "Верный ответ - programming"
-    )
+print(long_word(sentence))
